@@ -1,6 +1,4 @@
 import java.io.File;
-import java.io.IOException;
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -43,8 +41,6 @@ public class Main {
         }
         return matrix;
     }
-
-    //#############arava#####################
 
     /**
      * receiving from the user the size and quantity for each battleship
@@ -338,26 +334,27 @@ public class Main {
          */
 
 
-    public static void main(String[] args) throws IOException {
-        String path = args[0];
-        scanner = new Scanner(new File(path));
-        int numberOfGames = scanner.nextInt();
-        scanner.nextLine();
+            }
 
-        System.out.println("Total of " + numberOfGames + " games.");
-
-        for (int i = 1; i <= numberOfGames; i++) {
-            scanner.nextLine();
-            int seed = scanner.nextInt();
-            rnd = new Random(seed);
-            scanner.nextLine();
-            System.out.println("Game number " + i + " starts.");
-            battleshipGame();
-            System.out.println("Game number " + i + " is over.");
-            System.out.println("------------------------------------------------------------");
         }
-        System.out.println("All games are over.");
-    }
-}
 
 
+
+
+        public static char[][] (int [] Histogram, int [] LocationAndOrientation, char[][] gameBoard) {
+            int i = 0;
+            while (i<= Histogram.length -1){
+                if (Histogram[i] > 0){
+                    while (!(validity1(LocataionAndOrientation, infoArray,i , gameBoard)){
+                        String LocataionAndOrientationInfo = scanner.nextLine();
+                        int [] LocataionAndOrientation = LocationAndOrientationArr(LocataionAndOrientationInfo);
+                    }
+                    if ((validity1(LocataionAndOrientation, infoArray,i , gameBoard)){
+                        LocateBattleships(LocataionAndOrientation,i, boardgame);
+                        System.out.println(boardgame);
+                        Histogram[i] -= 1; }
+                }}
+                else {
+                i += 1;
+            }
+        }
