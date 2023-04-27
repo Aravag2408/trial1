@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -71,22 +72,52 @@ public class Main {
         String battleShipSize = scanner.nextLine();
         int [] battleShipSizeHistogram = battleShipSize((String) battleShipSize);
         System.out.println("Enter location and orientation for battleship of sizes");
+        String LocataionAndOrientation = scanner.nextLine();
 
-        String bshipLocataionAndOrientation = scanner.nextLine();
+
     }
-    /*
+
+    /**
+     * the
+     * @param cordinats
+     * @param boardinfo
+     * @return
+     */
 //(x,y,orientation)
-    public static String validity( String word) {
-       // if (word.charAt(6) != '0' && (word.charAt(6) != '1') {
-         //   System.out.println("Illegal orientation, try again!");
-        if ()
-            System.out.println("Illegal tile orientation, try again!");
-            System.out.println("Battleship exceeds the boundaries of the board");
-            System.out.println("Battleship exceeds the boundaries of the board, try again!");
+    public static String validity1( int[] cordinats, int[] boardinfo,int sizeOfShip ) {
+        int n = boardinfo[0];
+        int m = boardinfo[1];
+
+        boolean isValid = false;
+        while (!isValid) {
+            if ((cordinats[2] != 0) && (cordinats[2] != 1)) {
+                System.out.println("Illegal orientation, try again!");
+                break;
+            }
+            if ((cordinats[0]>=n) || (cordinats[1]>=m)) {
+                System.out.println("Illegal tile orientation, try again!");
+                break;
+            }
+            if (cordinats[2] ==0 ){
+                if ((cordinats[0]+sizeOfShip) >= n){
+                    System.out.println("Battleship exceeds the boundaries of the board");
+                break;
+                }
+            }
+            if (cordinats[2] ==1 ){
+                if ((cordinats[1]+sizeOfShip) >= m){
+                    System.out.println("Battleship exceeds the boundaries of the board");
+                break;
+                }
+            }
+
+
+
+             System.out.println("Battleship exceeds the boundaries of the board, try again!");
             System.out.println("Battleship overlaps another battleship, try again!");
             System.out.println("Adjacent battleship detected, try again!");
         }
-    }
+    /*
         /*
         check that it fits the board
         print "enter loc and ori
