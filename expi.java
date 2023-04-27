@@ -1,9 +1,7 @@
-import java.io.File;
-import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
-public class BLA {
+public class expi {
     public static Scanner scanner;
     public static Random rnd;
     /**
@@ -12,8 +10,8 @@ public class BLA {
      * @return  an arr with the relevant values in 0,1
      */
     public static int[]  numExtract(String str) {
-        String arr[] = str.split("X");
-        int intarray[] = new int[2];
+        String[] arr = str.split("X");
+        int[] intarray = new int[2];
         for (int i=0; i < 2; i++ ) {
             intarray[i]=Integer.parseInt(str);
         }
